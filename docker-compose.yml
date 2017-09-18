@@ -1,0 +1,21 @@
+version: '2'
+services:
+  flsk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - selenium-server
+    networks:
+      - flsk-network
+  selenium-server:
+    image: selenium/standalone-chrome:3.4
+    expose:
+      - "4444"
+    networks:
+      - flsk-network
+    shm_size: 2g
+
+networks:
+  flsk-network:
+    driver: bridge
