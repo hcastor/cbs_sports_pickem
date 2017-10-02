@@ -124,7 +124,7 @@ def main():
         fill_remaining_teams = False
 
     print('~'*50)
-    subject = f'Week {week} possibilities CORRECTED'
+    subject = f'Week {week} possibilities'
     print(subject)
     print('~'*50)
 
