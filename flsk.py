@@ -94,10 +94,10 @@ def main():
                 played = False
                 # if game is in progress "correct" picks count toward score
                 # Subtract them here
-                if correct:
-                    correct = ''
+                if correct == 'correct':
                     week_pts -= points
                     ytd_pts -= points
+                correct = ''
             elif in_progress != '':
                 print(in_progress)
                 raise Exception('Failed to parse correct class name')
